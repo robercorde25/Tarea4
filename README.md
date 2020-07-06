@@ -204,6 +204,8 @@ for k, b in enumerate(bits):
 
 Despuesde la decodificacion se hizo un conteo de errores para cada una de las senales, donde se obtuvo los resultados siguientes:
 
-⋅⋅* ![alt text][Ec2]
+⋅⋅* Alo 
+
+![alt text][Ec2]
 
 [Ec2]: https://latex.codecogs.com/svg.latex?E_{-2dB}%20=%200% "Logo Title Text 2"
