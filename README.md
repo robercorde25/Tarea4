@@ -6,15 +6,15 @@ Nombre: Roberto Cordero Jiménez.
 
 ## 1. Crear un esquema de modulación BPSK para los bits presentados.
 
-Para crear la modulacion se utilizo el esquema BPSK el cual codifica los bits mediante una onda portadora sinusoidal. Dicha onda portadora asignara una onda con una fase de 0 grados si el bit es igual a 1 y, de igual forma, asignara una onda con una fase de 180 grados a los bits cuyos valores sean iguales a 0.
+Para crear la modulación se utilizo el esquema BPSK el cual codifica los bits mediante una onda portadora sinusoidal. Dicha onda portadora asignará una onda con una fase de 0 grados si el bit es igual a 1 y, de igual forma, asignará una onda con una fase de 180 grados a los bits cuyos valores sean iguales a 0.
 
-La forma de la onda prtadora fue la siguiente:
+La forma de la onda portadora es la siguiente:
 
 ![alt text][Portadora]
 
 [Portadora]: https://github.com/robercorde25/Tarea4/blob/master/Portadora.PNG "Logo Title Text 2"
 
-Y se implemento mediante el codigo:
+Y se implementó mediante el código siguiente:
 
 ```python
 #Frecuencia de la portadora
@@ -33,13 +33,13 @@ tp = np.linspace(0,T,p)
 sinus = np.sin(2*np.pi*f*tp)
 ```
 
-Despues se modulo la senal y y se obtuvo la siguiente visualizacion, donde se muestran los primeros cinco bits codificados:
+Después se moduló la señal y y se obtuvo la siguiente visualización, donde se muestran los primeros cinco bits codificados:
 
 ![alt text][Modulada]
 
 [Modulada]: https://github.com/robercorde25/Tarea4/blob/master/Modulada.PNG "Logo Title Text 2"
 
-La modulacion anterior se implemento por medio del codigo siguiente:
+La modulación anterior se implementó por medio del código siguiente:
 
 ```python
 
@@ -58,13 +58,13 @@ for k, b in enumerate(bits):
 
 ```
 
-El codigo anterior indica que si el bit por codificar es igual a 1, entonces la modulacion en ese periodo sera igual a la forma seno (con fase de 0 grados); mientras que si el bit por codificar es igual a 0,  la modulacion en ese periodo sera igual a -seno (el cual tiene una fase de 180 grados).
+El código anterior indica que si el bit por codificar es igual a 1, entonces la modulación en ese periodo será igual a la forma seno (con fase de 0 grados); mientras que si el bit por codificar es igual a 0,  la modulación en ese periodo será igual a -seno (el cual tiene una fase de 180 grados).
 
 
 
 ## 2. Calcular la potencia promedio de la señal modulada generada.
 
-Para calcular la potencia promedio de la senal se utilizo la biblioteca integrate mediante el codigo siguiente:
+Para calcular la potencia promedio de la señal se utilizó la biblioteca *integrate* mediante el código siguiente:
 
 
 ```python
@@ -82,7 +82,7 @@ De la cual se obtuvo el resultado:
 
 ## 3. Simular un canal ruidoso del tipo AWGN (ruido aditivo blanco gaussiano) con una relación señal a ruido (SNR) desde -2 hasta 3 dB.
 
-Seguidamente, se simularon se distintos canales por los cuales la senal modulada debia pasar (-2dB, -1dB, 0dB, 1dB, 2dB, 3dB), donde se obtuvieron siguientes las visualizaciones para los primeros cinco bits:
+Seguidamente, se simularon distintos canales por los cuales la señal modulada debía pasar (-2dB, -1dB, 0dB, 1dB, 2dB, 3dB), donde se obtuvieron siguientes las visualizaciones para los primeros cinco bits:
 
 
 ![alt text][-2]
@@ -117,7 +117,7 @@ Seguidamente, se simularon se distintos canales por los cuales la senal modulada
 
 ## 4. Graficar la densidad espectral de potencia de la señal con el método de Welch (SciPy), antes y después del canal ruidoso.
 
-Para la senal modulada, sin atravesar ningun canal, se obtuvo la grafica de densidad espectral siguiente:
+Para la señal modulada, sin atravesar ningún canal, se obtuvo la gráfica de densidad espectral siguiente:
 
 ![alt text][Den1]
 
@@ -129,14 +129,14 @@ Asimismo, cuando la onda modulada atraviesa los distintos canales, se tienen los
 
 [Den2]: https://github.com/robercorde25/Tarea4/blob/master/Den2.PNG "Logo Title Text 2"
 
-En ambas graficas se observa que la concentracion de energia se da alrededor de la componente fundamental de 5kHz.
+En ambas gráficas se observa que la concentración de energía se da alrededor de la componente fundamental de 5kHz.
 
 
 ## 5. Demodular y decodificar la señal y hacer un conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
-En la decodificacion se realizo un producto de senales por periodo, donde se tomaron la forma original de la senal portadora (seno) y la senal modulada despues de haber atravesado uno se los cinco canales. Dicho producto implicaba una senal con fase 0 (portadora con forma seno) y una senal ya sea con una fase de 0 o 180 grados mas su ruido (bits codificados). Si el producto de dichas senal es positivo, significa que el bit codificado es 1 puesto que el mismo corresponde a una senal con fase de 0 grados; no asi, cuando el producto es negativo, el bit codificado era 0 puesto que este corresponde a una senal con fase de 180 grados.
+En la decodificación se realizó un producto de senales por periodo, donde se tomaron la forma original de la señal portadora (seno) y la señal modulada después de haber atravesado uno se los cinco canales. Dicho producto implicaba una señal con fase 0 (portadora con forma seno) y una señal ya sea con una fase de 0 o 180 grados (bits codificados) más el ruido por haber atravesado el canal. Si el producto de dichas señales es positivo, significa que el bit codificado es 1 puesto que el mismo corresponde a una señal con fase de 0 grados; no así, cuando el producto es negativo, el bit codificado es 0 puesto que este corresponde a una señal con fase de 180 grados.
 
-La decodificacion se realizo por medio del codigo siguiente:
+La demodulación se realizó por medio del código siguiente:
 
 ```python
 
@@ -202,7 +202,7 @@ for k, b in enumerate(bits):
         bitsRx3[k] = 0
 ```
 
-Despues de la decodificacion se hizo un conteo de errores para cada una de las senales, donde se obtuvo los resultados siguientes:
+Después de la demodulación se hizo un conteo de errores para cada una de las señales, donde se obtuvo los resultados siguientes:
 
 - ![alt text][Ec2]
 
