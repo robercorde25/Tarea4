@@ -207,3 +207,23 @@ Despues de la decodificacion se hizo un conteo de errores para cada una de las s
 - ![alt text][Ec2]
 
 [Ec2]: https://latex.codecogs.com/svg.latex?E_{-2dB}%20=%200% "Logo Title Text 2"
+
+- ![alt text][Ec3]
+
+[Ec3]: https://latex.codecogs.com/svg.latex?E_{-1dB}%20=%200% "Logo Title Text 2"
+
+- ![alt text][Ec2]
+
+[Ec4]: https://latex.codecogs.com/svg.latex?E_{0dB}%20=%200% "Logo Title Text 2"
+
+- ![alt text][Ec2]
+
+[Ec5]: https://latex.codecogs.com/svg.latex?E_{1dB}%20=%200% "Logo Title Text 2"
+
+- ![alt text][Ec2]
+
+[Ec6]: https://latex.codecogs.com/svg.latex?E_{2dB}%20=%200% "Logo Title Text 2"
+
+- ![alt text][Ec2]
+
+[Ec7]: https://latex.codecogs.com/svg.latex?E_{3dB}%20=%200% "Logo Title Text 2"
