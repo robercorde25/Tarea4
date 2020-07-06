@@ -115,8 +115,13 @@ Seguidamente, se simularon se distintos canales por los cuales la senal modulada
 [3]: https://github.com/robercorde25/Tarea4/blob/master/3.PNG "Logo Title Text 2"
 
 
+## 4. Graficar la densidad espectral de potencia de la señal con el método de Welch (SciPy), antes y después del canal ruidoso.
 
+Para la senal modulada, sin atravesar ningun canal, se obtuvo la grafica de densidad espectral siguiente:
 
+![alt text][Den1]
+
+[Den1]: https://github.com/robercorde25/Tarea4/blob/master/Den1.PNG "Logo Title Text 2"
 
 
 
