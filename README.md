@@ -58,7 +58,7 @@ for k, b in enumerate(bits):
 
 ```
 
-
+El codigo anterior indica que si el bit por codificar es igual a 1, entonces la modulacion en ese periodo sera igual a la forma seno (con fase de 0 grados); mientras que si el bit por codificar es igual a 0,  la modulacion en ese periodo sera igual a -seno (el cual tiene una fase de 180 grados).
 
 
 
