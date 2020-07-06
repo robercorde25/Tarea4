@@ -29,6 +29,11 @@ tp = np.linspace(0,T,p)
 sinus = np.sin(2*np.pi*f*tp)
 ```
 
+Despues se modulo la senal y y se obtuvo la siguiente visualizacion, donde se muestran los primeros cinco bits codificados:
+
+![alt text][Modulada]
+
+[Modulada]: https://github.com/robercorde25/Tarea4/blob/master/Modulada.PNG "Logo Title Text 2"
 
 
 
