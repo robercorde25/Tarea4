@@ -82,11 +82,37 @@ De la cual se obtuvo el resultado:
 
 ## 3. Simular un canal ruidoso del tipo AWGN (ruido aditivo blanco gaussiano) con una relación señal a ruido (SNR) desde -2 hasta 3 dB.
 
+Seguidamente, se simularon se distintos canales por los cuales la senal modulada debia pasar (-2dB, -1dB, 0dB, 1dB, 2dB, 3dB), donde se obtuvieron siguientes las visualizaciones para los primeros cinco bits:
 
 
+![alt text][-2]
+
+[-2]: https://github.com/robercorde25/Tarea4/blob/master/-2.PNG "Logo Title Text 2"
 
 
+![alt text][-1]
 
+[-1]: https://github.com/robercorde25/Tarea4/blob/master/-1.PNG "Logo Title Text 2"
+
+
+![alt text][0]
+
+[0]: https://github.com/robercorde25/Tarea4/blob/master/0.PNG "Logo Title Text 2"
+
+
+![alt text][1]
+
+[1]: https://github.com/robercorde25/Tarea4/blob/master/1.PNG "Logo Title Text 2"
+
+
+![alt text][2]
+
+[2]: https://github.com/robercorde25/Tarea4/blob/master/2.PNG "Logo Title Text 2"
+
+
+![alt text][3]
+
+[3]: https://github.com/robercorde25/Tarea4/blob/master/3.PNG "Logo Title Text 2"
 
 
 
