@@ -80,6 +80,7 @@ De la cual se obtuvo el resultado:
 
 
 
+## 3. Simular un canal ruidoso del tipo AWGN (ruido aditivo blanco gaussiano) con una relación señal a ruido (SNR) desde -2 hasta 3 dB.
 
 
 
