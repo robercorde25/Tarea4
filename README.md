@@ -204,7 +204,7 @@ for k, b in enumerate(bits):
 
 Despues de la decodificacion se hizo un conteo de errores para cada una de las senales, donde se obtuvo los resultados siguientes:
 
-..* Alo 
+- Alo 
 
 ![alt text][Ec2]
 
