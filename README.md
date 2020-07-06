@@ -4,7 +4,7 @@ Carné: B72299.
 
 Nombre: Roberto Cordero Jiménez.
 
-## Crear un esquema de modulación BPSK para los bits presentados.
+## 1. Crear un esquema de modulación BPSK para los bits presentados.
 
 Para crear la modulacion se utilizo el esquema BPSK el cual codifica los bits mediante una onda portadora sinusoidal. Dicha onda portadora asignara una onda con una fase de 0 grados si el bit es igual a 1 y, de igual forma, asignara una onda con una fase de 180 grados a los bits cuyos valores sean iguales a 0.
 
@@ -62,9 +62,21 @@ El codigo anterior indica que si el bit por codificar es igual a 1, entonces la 
 
 
 
+## 2. Calcular la potencia promedio de la señal modulada generada.
+
+Para calcular la potencia promedio de la senal se utilizo la biblioteca integrate mediante el codigo siguiente:
 
 
+```python
+potencia = senal**2
+Ps = (integrate.trapz(potencia,t)) / (N*T)
+```
 
+De la cual se obtuvo el resultado: 
+
+\begin{align}
+Ps = 56
+\end{align}
 
 
 
