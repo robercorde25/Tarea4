@@ -123,6 +123,13 @@ Para la senal modulada, sin atravesar ningun canal, se obtuvo la grafica de dens
 
 [Den1]: https://github.com/robercorde25/Tarea4/blob/master/Den1.PNG "Logo Title Text 2"
 
+Asimismo, cuando la onda modulada atraviesa los distintos canales, se tienen los resultados siguientes:
+
+![alt text][Den2]
+
+[Den2]: https://github.com/robercorde25/Tarea4/blob/master/Den2.PNG "Logo Title Text 2"
+
+En ambas graficas se observa que la concentracion de energia se da alrededor de la componente fundamental de 5kHz.
 
 
 
