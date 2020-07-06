@@ -19,12 +19,16 @@ Y se implemento mediante el codigo:
 ```python
 #Frecuencia de la portadora
 f=5000 #Hz
+
 #Periodo de la portadora
 T= 1/f
+
 #Puntos de muestreo para cada periodo (bit)
 p=50
+
 #Eje x cada periodo de la onda portadora
 tp = np.linspace(0,T,p)
+
 #Eje y de cada periodo (creacion de la forma de onda portadora)
 sinus = np.sin(2*np.pi*f*tp)
 ```
@@ -34,6 +38,25 @@ Despues se modulo la senal y y se obtuvo la siguiente visualizacion, donde se mu
 ![alt text][Modulada]
 
 [Modulada]: https://github.com/robercorde25/Tarea4/blob/master/Modulada.PNG "Logo Title Text 2"
+
+La modulacion anterior se implemento por medio del codigo siguiente:
+
+```python
+
+#Eje x la señal portadora con todos los bits
+t= np.linspace(0,N*T,N*p)
+
+#Eje y la señal portadora con todos los bits (modulacion BPSK)
+
+senal = np.zeros(t.shape)
+
+for k, b in enumerate(bits):
+    if b==1:
+        senal[k*p:(k+1)*p] = b*sinus
+    else:
+        senal[k*p:(k+1)*p] = -1*sinus
+
+```
 
 
 
