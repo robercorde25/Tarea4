@@ -134,7 +134,7 @@ En ambas graficas se observa que la concentracion de energia se da alrededor de 
 
 ## 5. Demodular y decodificar la señal y hacer un conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
-En la decodificacion se realizo un producto de senales por periodo, donde se tomaron la forma original de la senal portadora (seno) y la senal modulada despues de haber atravesado uno se los cinco canales. Dicho producto implicaba una senal con fase 0 (portadora con forma seno) y una senal ya sea con una fase de 0 o 180 grados y con ruido. Si el producto de dichas senal es positivo, significa que el bit codificado es 1 puesto que el mismo corresponde a una senal con fase de 0 grados y ruido; no asi, cuando el producto es negativo, significa que el bit codificado era 0 puesto que este corresponde a una senal con fase de 180 grados contemplando su respectivo ruido tambien.
+En la decodificacion se realizo un producto de senales por periodo, donde se tomaron la forma original de la senal portadora (seno) y la senal modulada despues de haber atravesado uno se los cinco canales. Dicho producto implicaba una senal con fase 0 (portadora con forma seno) y una senal ya sea con una fase de 0 o 180 grados y con ruido. Si el producto de dichas senal es positivo, significa que el bit codificado es 1 puesto que el mismo corresponde a una senal con fase de 0 grados y ruido; no asi cuando el producto es negativo, significa que el bit codificado era 0 puesto que este corresponde a una senal con fase de 180 grados contemplando su respectivo ruido tambien.
 
 La decodificacion se realizo por medio del codigo siguiente:
 
