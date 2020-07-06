@@ -132,6 +132,73 @@ Asimismo, cuando la onda modulada atraviesa los distintos canales, se tienen los
 En ambas graficas se observa que la concentracion de energia se da alrededor de la componente fundamental de 5kHz.
 
 
+## 5. Demodular y decodificar la señal y hacer un conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
+
+En la decodificacion se realizo un producto de senales por periodo, donde se tomaron la forma original de la senal portadora (seno) y la senal modulada despues de haber atravesado uno se los cinco canales. Dicho producto implicaba una senal con fase 0 (portadora con forma seno) y una senal ya sea con una fase de 0 o 180 grados y con ruido. Si el producto de dichas senal es positivo, significa que el bit codificado es 1 puesto que el mismo corresponde a una senal con fase de 0 grados y ruido; no asi, cuando el producto es negativo, significa que el bit codificado era 0 puesto que este corresponde a una senal con fase de 180 grados contemplando su respectivo ruido tambien.
+
+La decodificacion se realizo por medio del codigo siguiente:
+
+```python
+
+#Simulacion de las cinco senales a traves de un canal con ruido
+Rxm2 = senal + ruidom2
+Rxm1 = senal + ruidom1
+Rx0 = senal + ruido0
+Rx1 = senal + ruido1
+Rx2 = senal + ruido2
+Rx3 = senal + ruido3
 
 
+#Vector de bits recibidos para los cinco ruidos
+bitsRxm2 = np.zeros(bits.shape)
+bitsRxm1 = np.zeros(bits.shape)
+bitsRx0 = np.zeros(bits.shape)
+bitsRx1 = np.zeros(bits.shape)
+bitsRx2 = np.zeros(bits.shape)
+bitsRx3 = np.zeros(bits.shape)
+
+
+#Demodulacion de las senales con distintos ruidos (-2dB, -1dB, 0dB, 1dB, 2dB, 3dB).
+for k, b in enumerate(bits):
+    PE = np.sum(Rxm2[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRxm2[k] = 1
+    else:
+        bitsRxm2[k] = 0
+        
+for k, b in enumerate(bits):
+    PE = np.sum(Rxm1[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRxm1[k] = 1
+    else:
+        bitsRxm1[k] = 0
+        
+for k, b in enumerate(bits):
+    PE = np.sum(Rx0[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRx0[k] = 1
+    else:
+        bitsRx0[k] = 0
+        
+for k, b in enumerate(bits):
+    PE = np.sum(Rx1[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRx1[k] = 1
+    else:
+        bitsRx1[k] = 0
+        
+for k, b in enumerate(bits):
+    PE = np.sum(Rx2[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRx2[k] = 1
+    else:
+        bitsRx2[k] = 0
+        
+for k, b in enumerate(bits):
+    PE = np.sum(Rx3[k*p:(k+1)*p]*sinus)
+    if PE > 0:
+        bitsRx3[k] = 1
+    else:
+        bitsRx3[k] = 0
+```
 
