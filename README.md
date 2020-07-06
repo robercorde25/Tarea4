@@ -212,19 +212,19 @@ Después de la demodulación se hizo un conteo de errores para cada una de las s
 
 [Ec3]: https://latex.codecogs.com/svg.latex?BER_{-1dB}%20=%200% "Logo Title Text 2"
 
-- ![alt text][Ec2]
+- ![alt text][Ec3]
 
 [Ec4]: https://latex.codecogs.com/svg.latex?BER_{0dB}%20=%200% "Logo Title Text 2"
 
-- ![alt text][Ec2]
+- ![alt text][Ec4]
 
 [Ec5]: https://latex.codecogs.com/svg.latex?BER_{1dB}%20=%200% "Logo Title Text 2"
 
-- ![alt text][Ec2]
+- ![alt text][Ec5]
 
 [Ec6]: https://latex.codecogs.com/svg.latex?BER_{2dB}%20=%200% "Logo Title Text 2"
 
-- ![alt text][Ec2]
+- ![alt text][Ec6]
 
 [Ec7]: https://latex.codecogs.com/svg.latex?BER_{3dB}%20=%200% "Logo Title Text 2"
 
