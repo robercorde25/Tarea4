@@ -74,10 +74,9 @@ Ps = (integrate.trapz(potencia,t)) / (N*T)
 
 De la cual se obtuvo el resultado: 
 
-\begin{align}
-Ps = 56
-\end{align}
+![alt text][Ec1]
 
+[Ec1]: http://www.sciweavers.org/upload/Tex2Img_1594060564/eqn.png
 
 
 
